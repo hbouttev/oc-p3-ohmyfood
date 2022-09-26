@@ -1,0 +1,21 @@
+{
+  "name": "oc-p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Ohmyfood! is the 3rd OpenClassrooms project in DA - JavaScript React.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --watch --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbouttev/oc-p3-ohmyfood.git"
+  },
+  "author": "Hadrien Boutteville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbouttev/oc-p3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/hbouttev/oc-p3-ohmyfood#readme",
+  "browserslist": ["defaults and supports es6-module"]
+}
