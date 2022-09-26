@@ -1,0 +1,29 @@
+.hero {
+  background: $colour-background-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 50px;
+  &__title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__description {
+    margin: 16px 0 0;
+    font-size: 1.12rem;
+  }
+  &__button-explore {
+    margin-top: 30px;
+    border: none;
+    //background: linear-gradient(173deg, #ff9158 0%, #ff9158 40%, #cc56ff 130%);
+    background: radial-gradient(100% 120% at 50% 0%, $colour-secondary 0%, $colour-primary 100%);
+    border-radius: 25px;
+    color: $colour-white;
+    height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+}

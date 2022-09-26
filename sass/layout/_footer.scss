@@ -1,0 +1,31 @@
+.site-footer {
+  background-color: $colour-background-dark;
+  color: $colour-white;
+  padding: 30px 20px;
+  &__title {
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: normal;
+    font-size: 1.12rem;
+    margin: 0;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  &__link {
+   &--bold {
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   }
+  }
+  &__link-icon {
+    font-size: 0.9rem;
+    width:  1rem;
+  }
+}
+
+//Shrikhand

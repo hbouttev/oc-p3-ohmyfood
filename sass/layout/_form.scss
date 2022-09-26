@@ -1,0 +1,16 @@
+.location-form {
+  background: $colour-background-input;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  &__label {
+
+  }
+  &__input {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
