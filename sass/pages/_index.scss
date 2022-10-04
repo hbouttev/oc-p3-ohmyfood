@@ -1,23 +1,57 @@
 .howto {
-  padding: 30px 20px;
+  padding: 30px 20px 60px;
   &__title {
-
+    //font-size: 1.5rem;
+    //font-weight: bold;
+    //margin: 0;
   }
   &__steps {
-    padding: 0;
+    padding-left: 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
+    gap: 25px;
   }
 }
 
 .step {
-
+  background-color: $colour-background-light;
+  border-radius: 25px;
+  height: 75px;
+  box-shadow: 0 4px 14px 0 lightgrey; // TODO: mixin
+  display: flex;
+  align-items: center;
+  &__number {
+    font-size: 1rem;
+    color: $colour-white;
+    background-color: $colour-primary;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+    margin-left: -12px;
+  }
   &__icon {
-
+    width: 60px;
+    font-size: 1.2rem;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__title {
-
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 4px;
+  }
+  &--purple {
+    background-color: lighten($colour-primary, 35%);
+    .step__icon {
+      color: $colour-primary;
+    }
   }
 }
 
