@@ -6,6 +6,11 @@
   box-shadow: 0 4px 14px 0 lightgrey;
   overflow: hidden;
   transition: 0.3s;
+  position: relative;
+  //&:hover {
+  //  background: $colour-secondary;
+  //  box-shadow: 0 6px 16px 3px darkgrey;
+  //}
   &__link {
     height: 100%;
     width: 100%;
@@ -50,5 +55,17 @@
     &:hover {
       color: $colour-primary;
     }
+  }
+  &__new {
+    position: absolute;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    background: $colour-tertiary;
+    color: darken($colour-tertiary, 40%);
+    padding: 8px 10px 6px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 2px;
   }
 }
