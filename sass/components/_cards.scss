@@ -16,10 +16,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    &:hover {
-      background: $colour-secondary;
-      box-shadow: 0 6px 16px 3px darkgrey;
-    }
   }
   &__image-wrapper {
     height: 70%;
@@ -37,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   &__content {
     display: flex;
@@ -46,14 +42,19 @@
   }
   &__title {
     margin: 0;
+    font-size: 1.125rem;
   }
   &__location {
     margin: 0;
+    font-weight: 300;
+    font-size: 1rem;
   }
   &__favorite {
     font-size: 1.5rem;
-    &:hover {
+    padding-right: 15px;
+    i:hover {
       color: $colour-primary;
+      font-weight: 700;
     }
   }
   &__new {
