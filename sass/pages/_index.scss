@@ -53,6 +53,12 @@
       color: $colour-primary;
     }
   }
+  &:hover {
+    background-color: lighten($colour-primary, 35%);
+    .step__icon {
+      color: $colour-primary;
+    }
+  }
 }
 
 .restaurants {
