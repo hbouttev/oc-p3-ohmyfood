@@ -115,21 +115,29 @@
     border-radius: 15px;
     box-shadow: 0 4px 14px 0 lightgrey;
     padding: 13px 20px 13px 12px;
+    gap: 10px;
     &-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      overflow: hidden;
     }
     &-title {
       margin: 0;
       font-size: 1.125rem;
       font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &-description {
       margin: 0;
       font-weight: 300;
       font-size: 0.93rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &-price {
       margin: 0;
