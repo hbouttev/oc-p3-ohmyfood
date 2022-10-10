@@ -87,7 +87,9 @@
   }
   &__cards > * {
     margin-bottom: 20px;
+    flex: 0 0 100%;
     @include small-screen-up {
+      flex: 0 0 48.5%;
       margin-bottom: 3%;
     }
   }

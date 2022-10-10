@@ -6,9 +6,6 @@
   box-shadow: 0 4px 14px 0 lightgrey;
   overflow: hidden;
   position: relative;
-  @include small-screen-up {
-    max-width: 48.5%;
-  }
   @include large-screen-up {
     height: 300px;
   }
