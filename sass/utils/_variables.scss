@@ -9,7 +9,11 @@ $colour-font-primary: black;
 $colour-font-secondary: #353535;
 $colour-icons: #7E7E7E;
 
+$desktop-max-width: 1000px;
+
 $breakpoints: (
-  'tablet' : 600px,
-  'desktop' : 1000px
+        'sm' : 600px,
+        'md' : 800px,
+        'lg' : 1000px,
+        'desktop-content' : $desktop-max-width
 );

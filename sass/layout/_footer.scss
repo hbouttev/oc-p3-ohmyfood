@@ -2,6 +2,9 @@
   background-color: $colour-background-dark;
   color: $colour-white;
   padding: 30px 20px;
+  &__content {
+    @include content-max-width-desktop
+  }
   &__title {
     font-family: 'Shrikhand', cursive;
     font-weight: normal;
@@ -28,5 +31,3 @@
     width:  1rem;
   }
 }
-
-//Shrikhand

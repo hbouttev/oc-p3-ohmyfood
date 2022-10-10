@@ -1,11 +1,28 @@
-@mixin tablet-and-more {
-  @media screen and (min-width: map-get($breakpoints, tablet)) {
+@mixin small-screen-up {
+  @media screen and (min-width: map-get($breakpoints, sm)) {
     @content;
   }
 }
 
-@mixin desktop-and-more {
-  @media screen and (min-width: map-get($breakpoints, desktop)) {
+@mixin medium-screen-up {
+  @media screen and (min-width: map-get($breakpoints, md)) {
     @content;
   }
+}
+
+@mixin large-screen-up {
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin desktop-content-width-up {
+  @media screen and (min-width: map-get($breakpoints, desktop-content)) {
+    @content;
+  }
+}
+
+@mixin content-max-width-desktop {
+  margin: auto;
+  max-width: $desktop-max-width;
 }

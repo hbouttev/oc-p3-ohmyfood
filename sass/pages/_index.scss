@@ -1,16 +1,22 @@
 .howto {
   padding: 30px 20px 60px;
+  &__content {
+    width: 100%;
+    @include content-max-width-desktop;
+  }
   &__title {
-    //font-size: 1.5rem;
-    //font-weight: bold;
-    //margin: 0;
   }
   &__steps {
     padding-left: 20px;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin: auto;
+    @include large-screen-up {
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 0;
+    }
   }
 }
 
@@ -21,6 +27,8 @@
   box-shadow: 0 4px 14px 0 lightgrey; // TODO: mixin
   display: flex;
   align-items: center;
+  padding-right: 30px;
+  transition: 0.3s;
   &__number {
     font-size: 1rem;
     color: $colour-white;
@@ -63,13 +71,22 @@
 
 .restaurants {
   background: $colour-background-light;
-  padding: 30px 20px 60px;
+  padding: 30px 20px 40px;
+  &__content {
+    @include content-max-width-desktop;
+  }
   &__title {
-
   }
   &__cards {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__cards > * {
+    margin-bottom: 20px;
+    @include small-screen-up {
+      margin-bottom: 3%;
+    }
   }
 }

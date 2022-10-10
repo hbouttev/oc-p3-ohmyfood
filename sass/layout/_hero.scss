@@ -1,11 +1,14 @@
 .hero {
   background: $colour-background-light;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 40px 20px 50px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include content-max-width-desktop
+  }
   &__title {
     margin: 0;
     font-size: 1.5rem;

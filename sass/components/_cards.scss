@@ -5,40 +5,42 @@
   border-radius: 15px;
   box-shadow: 0 4px 14px 0 lightgrey;
   overflow: hidden;
-  transition: 0.3s;
   position: relative;
-  //&:hover {
-  //  background: $colour-secondary;
-  //  box-shadow: 0 6px 16px 3px darkgrey;
-  //}
+  @include small-screen-up {
+    max-width: 48.5%;
+  }
+  @include large-screen-up {
+    height: 300px;
+  }
   &__link {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
+    &:hover {
+      background-color: lighten($colour-primary, 35%);
+    }
+    &:active {
+      background-color: lighten($colour-primary, 35%);
+    }
   }
   &__image-wrapper {
     height: 70%;
     width: 100%;
-    //border-radius: 20px 20px 0 0;
-    //overflow: hidden;
   }
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  &__content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 15px;
-  }
   &__content {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
+    height: 100%;
+    padding: 0 70px 0 15px;
   }
   &__title {
     margin: 0;
@@ -51,10 +53,26 @@
   }
   &__favorite {
     font-size: 1.5rem;
-    padding-right: 15px;
-    i:hover {
-      color: $colour-primary;
+    z-index: 2;
+    position: absolute;
+    bottom: 11%;
+    right: 30px;
+    display: flex;
+    &:hover i {
+      color: transparent;
+      background: linear-gradient($colour-primary, $colour-secondary);
+      -webkit-background-clip: text;
       font-weight: 700;
+      transition: 0.5s; // TODO: transition goes first to bold plain black, then color. Transition from a color ?
+      cursor: pointer;
+    }
+    &:active i {
+      color: transparent;
+      background: linear-gradient($colour-primary, $colour-secondary);
+      -webkit-background-clip: text;
+      font-weight: 700;
+      transition: 0.5s;
+      cursor: pointer;
     }
   }
   &__new {
