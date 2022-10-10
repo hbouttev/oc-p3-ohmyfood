@@ -52,28 +52,11 @@
     font-size: 1rem;
   }
   &__favorite {
-    font-size: 1.5rem;
     z-index: 2;
     position: absolute;
     bottom: 11%;
     right: 30px;
     display: flex;
-    &:hover i {
-      color: transparent;
-      background: linear-gradient($colour-primary, $colour-secondary);
-      -webkit-background-clip: text;
-      font-weight: 700;
-      transition: 0.5s; // TODO: transition goes first to bold plain black, then color. Transition from a color ?
-      cursor: pointer;
-    }
-    &:active i {
-      color: transparent;
-      background: linear-gradient($colour-primary, $colour-secondary);
-      -webkit-background-clip: text;
-      font-weight: 700;
-      transition: 0.5s;
-      cursor: pointer;
-    }
   }
   &__new {
     position: absolute;
