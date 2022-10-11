@@ -8,7 +8,7 @@
   padding: 0 20px;
   box-shadow: 0 4px 8px #B8B8B8;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: radial-gradient(100% 120% at 50% 0%, lighten($colour-secondary, 5%) 0%, lighten($colour-primary, 5%) 100%);
     box-shadow: 0 4px 10px #9b9b9b;

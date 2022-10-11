@@ -14,7 +14,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     &:hover {
       background-color: lighten($colour-primary, 35%);
     }

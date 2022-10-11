@@ -27,9 +27,15 @@
   box-shadow: 0 4px 14px 0 lightgrey; // TODO: mixin
   display: flex;
   align-items: center;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
   @include desktop-content-width-up {
     width: 29%;
+  }
+  &:hover {
+    background-color: lighten($colour-primary, 35%);
+    .step__icon {
+      color: $colour-primary;
+    }
   }
   &__number {
     font-size: 1rem;
@@ -58,12 +64,6 @@
     padding-top: 4px;
   }
   &--purple {
-    background-color: lighten($colour-primary, 35%);
-    .step__icon {
-      color: $colour-primary;
-    }
-  }
-  &:hover {
     background-color: lighten($colour-primary, 35%);
     .step__icon {
       color: $colour-primary;
