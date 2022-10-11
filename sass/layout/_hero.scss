@@ -13,11 +13,23 @@
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+    @include medium-screen-up {
+      font-size: 1.6rem;
+    }
+    @include large-screen-up {
+      font-size: 1.8rem; // TODO: refactor in typography.scss
+    }
   }
   &__description {
     margin: 16px 0 0;
     font-size: 1.12rem;
     font-weight: 100;
+    @include medium-screen-up {
+      font-size: 1.16rem;
+    }
+    @include large-screen-up {
+      font-size: 1.2rem; // TODO: refactor in typography.scss
+    }
   }
   &__button {
     margin-top: 30px;
