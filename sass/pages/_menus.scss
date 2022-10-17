@@ -87,7 +87,7 @@
       background: $colour-tertiary;
     }
   }
-  &__item-container {
+  &__item {
     display: flex;
     width: 100%;
     height: 70px;
@@ -96,107 +96,76 @@
     box-shadow: 0 4px 14px 0 lightgrey;
     overflow: hidden;
   }
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    //width: 100%;
-    //height: 70px;
-    //background-color: $colour-white;
-    //border-radius: 15px;
-    //box-shadow: 0 4px 14px 0 lightgrey;
+}
 
-    //height: 100%;
-    padding: 13px 20px 13px 12px;
-    gap: 10px;
-    width: 100%;
-    min-width: 100px;
-    //&:hover + .menu-category__item-selected,
-    //&:active + .menu-category__item-selected {
-    //  //margin-right: 0;
-    //  width: 70px;
-    //  //transform: translateX(0);
-    //}
-    //&:hover + .menu-category__item-selected .item-selected,
-    //&:active + .menu-category__item-selected .item-selected {
-    //  transform: translateX(0);
-    //}
-    //&:hover + .menu-category__item-selected i,
-    //&:active + .menu-category__item-selected i {
-    //  transform: rotate(0deg);
-    //}
-
-    &:hover, &:active {
-      + .menu-category__item-selected {
-        width: 70px;
-        .item-selected {
-          transform: translateX(0);
-          i {
-            transform: rotate(0deg);
-          }
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 13px 20px 13px 12px;
+  gap: 10px;
+  width: 100%;
+  min-width: 100px;
+  &:hover, &:active {
+    + .item-selected {
+      width: 70px;
+      > .item-selected__content {
+        transform: translateX(0);
+        > .item-selected__icon {
+          transform: rotate(0deg);
         }
       }
     }
-    //&:hover .menu-category__item-content,
-    //&:active .menu-category__item-content {
-    //  width: calc(100% - 70px);
-    //}
-    &-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      overflow: hidden;
-      min-width: 100px;
-      // width: calc(100% - 20px)
-    }
-    &-title {
-      margin: 0;
-      font-size: 1.125rem;
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    &-description {
-      margin: 0;
-      font-weight: 300;
-      font-size: 0.93rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    &-price {
-      margin: 0;
-      font-weight: 500;
-      font-size: 0.93rem;
-    }
-    &-selected {
-      //flex: 0 0 70px;
-      //width: 70px;
-      flex-shrink: 0;
-      width: 0;
-      color: $colour-white;
-      font-size: 1.4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $colour-tertiary;
-      //margin-right: -70px;
-      //transition: margin-right 0.3s ease-in-out;
-      //transform: translateX(30px);
-      transition: all 0.3s ease-in-out;
-      //transition: width 0.3s, transform 0.2s 0.1s ease-in-out;
-      .item-selected {
-        display: flex;
-        transform: translateX(30px);
-        transition: transform 0.3s ease-in-out;
-      }
-      i {
-        transform: rotate(-225deg);
-        transition: transform 0.3s ease-in-out;
-      }
-    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    min-width: 100px;
+  }
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__description {
+    margin: 0;
+    font-weight: 300;
+    font-size: 0.93rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__price {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.93rem;
+  }
+}
+
+.item-selected {
+  flex-shrink: 0;
+  width: 0;
+  color: $colour-white;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colour-tertiary;
+  transition: all 0.3s ease-in-out;
+  &__content {
+    display: flex;
+    transform: translateX(30px);
+    transition: transform 0.3s ease-in-out;
+  }
+  &__icon {
+    transform: rotate(-225deg);
+    transition: transform 0.3s ease-in-out;
   }
 }
 
