@@ -95,6 +95,17 @@
     border-radius: 15px;
     box-shadow: 0 4px 14px 0 lightgrey;
     overflow: hidden;
+    &:hover, &:active {
+      > .item-selected {
+        width: 70px;
+        > .item-selected__content {
+          transform: translateX(0);
+          > .item-selected__icon {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -106,17 +117,6 @@
   gap: 10px;
   width: 100%;
   min-width: 100px;
-  &:hover, &:active {
-    + .item-selected {
-      width: 70px;
-      > .item-selected__content {
-        transform: translateX(0);
-        > .item-selected__icon {
-          transform: rotate(0deg);
-        }
-      }
-    }
-  }
   &__content {
     display: flex;
     flex-direction: column;
