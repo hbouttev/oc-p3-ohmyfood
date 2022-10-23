@@ -1,6 +1,5 @@
 .button {
   border: none;
-  //background: linear-gradient(173deg, #ff9158 0%, #ff9158 40%, #cc56ff 130%);
   background: radial-gradient(100% 120% at 50% 0%, $colour-secondary 0%, $colour-primary 100%);
   border-radius: 25px;
   color: $colour-white;
@@ -8,14 +7,26 @@
   padding: 0 20px;
   box-shadow: 0 4px 8px #B8B8B8;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background: radial-gradient(100% 120% at 50% 0%, lighten($colour-secondary, 5%) 0%, lighten($colour-primary, 5%) 100%);
-    box-shadow: 0 4px 10px #9b9b9b;
+  position: relative;
+  z-index: 1;
+  &:hover, &:active {
+    &::after {
+      opacity: 1;
+    }
   }
-  &:active {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: radial-gradient(100% 120% at 50% 0%, lighten($colour-secondary, 5%) 0%, lighten($colour-primary, 5%) 100%);
-    box-shadow: 0 4px 10px #9b9b9b;
+    box-shadow: 0 4px 8px #B8B8B8;
+    opacity: 0;
+    z-index: -1;
+    border-radius: inherit;
+    transition: opacity 0.2s ease-in-out;
   }
   &--large {
     padding: 0 50px;
