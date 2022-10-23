@@ -95,6 +95,8 @@
     border-radius: 15px;
     box-shadow: 0 4px 14px 0 lightgrey;
     overflow: hidden;
+    animation: items-loading 1s both;
+    @include items-transition-delay();
     &:hover, &:active {
       > .item-selected {
         width: 70px;

@@ -26,3 +26,11 @@
   margin: auto;
   max-width: $desktop-max-width;
 }
+
+@mixin items-transition-delay($menu-items: $max-menu-items-in-category,$start-delay: 0, $delay: 0.2) {
+  @for $item from 1 through $menu-items {
+    &:nth-of-type(#{$item}) {
+      animation-delay: #{$start-delay + $item * $delay}s;
+    }
+  }
+}
